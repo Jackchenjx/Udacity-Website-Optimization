@@ -1,5 +1,28 @@
 ## 网站性能优化项目
 
+
+## 优化概述
+
+### index.html
+
+- 将字体CSS分离, 并直接写入HTML中。
+- 将style.css内嵌入HTML中, 因为不多。
+- 移动main.js到body的末端。
+- 其他统计的js加async标签。
+- print.css 加media标签
+- 网站开启gzip压缩
+- 网站设置16d的缓存
+- 压缩`views/images/pizzeria.jpg`图片至450px宽度, 使用了imageMagick
+
+### main.js
+
+- 滚动响应时间 0.3ms
+- Resize时间 0.6ms
+- 清除了changePizzaSizes函数中的Forced reflow
+- 使用rAF来触发滚动事件。
+
+
+
 你要做的是尽可能优化这个在线项目的速度。注意，请应用你之前在[网站性能优化课程](https://cn.udacity.com/course/website-performance-optimization--ud884/)中学习的技术来优化关键渲染路径并使这个页面尽可能快的渲染。
 
 开始前，请导出这个代码库并检查代码。
